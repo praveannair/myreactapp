@@ -4,6 +4,7 @@ export default function App() {
   const sqr = (n) => {
     return n * n;
   };
+
   return (
     <div>
       <Home
