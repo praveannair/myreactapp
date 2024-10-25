@@ -1,4 +1,4 @@
 import ReactDOM from "react-dom/client";
-import App7 from './App7'
+import App9 from './App9'
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App7 />);
+root.render(<App9 />);
