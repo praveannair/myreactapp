@@ -1,16 +1,17 @@
 import {UserContext} from "./App9"
 import { useContext } from "react";
 export default function Child() {
-  const {name,setName,email,setEmail,cart,setCart} = useContext(UserContext);
+  const {cart} = useContext(UserContext);
   
  
   return (
     <>
-      <h2>Hello {name}-{email} from Child component</h2>
+      <h2>My Cart</h2>
       {cart.map((value,index)=> (
-            <div>{value.name}-{value.price}</div>
+            <div>{value.name}-{value.price}-<button>-</button>{value.qty}<button>+</button></div>
         ))}
-      <button onClick={()=>setName("Cathy")}>Submit</button>
+
+      {/* <button onClick={()=>setName("Cathy")}>Submit</button> */}
     </>
   );
 }

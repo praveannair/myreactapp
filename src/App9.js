@@ -3,28 +3,36 @@ import Child from "./Child";
 import Child2 from "./Child2";
 export const UserContext = createContext();
 export default function App9() {
-  const [name, setName] = useState("John");
-  const [cart, setCart] = useState([
+  const [product, setProduct] = useState([
     { name: "Product1", price: 53 },
     { name: "Product2", price: 58 },
+    { name: "Product3", price: 67 },
   ]);
-  const [email, setEmail] = useState("john@gmail.com");
-  const val = { name, setName, email, setEmail,cart,setCart };
+
+  const [cart, setCart] = useState([]);
+
+  const val = { cart };
+
+  const addProduct = (item) => {
+    // const product = { name: "Product4", price: 98, qty: 1 };
+    // const product = { name: "Product4", price: 98, qty: 1 };
+    item.qty = 1
+    setCart((cart) => [...cart, item]);
+  };
 
   return (
     <>
       <UserContext.Provider value={val}>
-        <h2>
-          Hello {name}-{email} from App9 component
-        </h2>
-        <button onClick={() => setName("Ria")}>Submit</button>
+        <h2>Products</h2>
         <hr></hr>
-        {cart.map((value,index)=> (
-            <div>{value.name}-{value.price}-<button>Add</button></div>
+        {product.map((value, index) => (
+          <div key={index}>
+            {value.name}-{value.price}-<button onClick={()=>addProduct(value)}>Add</button>
+          </div>
         ))}
+        
         <Child />
         <hr></hr>
-        <Child2 />
       </UserContext.Provider>
     </>
   );

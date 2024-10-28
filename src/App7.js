@@ -6,6 +6,8 @@ export default function App7() {
   
   const addStudent = () => {
     setStudents((prevStudents) => [...prevStudents, student]); };
+    
+    
 
     const deleteStudent = (name) => {
         setStudents(students.filter((e) => e.name !== name));
