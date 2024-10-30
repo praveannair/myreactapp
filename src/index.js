@@ -1,4 +1,4 @@
 import ReactDOM from "react-dom/client";
-import App9 from './App9'
+import App12 from './App12'
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App9 />);
+root.render(<App12 name="John"  />);

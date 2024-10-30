@@ -8,7 +8,7 @@ export default function Child() {
     <>
       <h2>My Cart</h2>
       {cart.map((value,index)=> (
-            <div>{value.name}-{value.price}-<button>-</button>{value.qty}<button>+</button></div>
+            <div>{value.name}-{value.price}-<button>-</button>{value.qty}<button>+</button>-<button>Delete</button></div>
         ))}
 
       {/* <button onClick={()=>setName("Cathy")}>Submit</button> */}
