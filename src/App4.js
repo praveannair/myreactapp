@@ -3,6 +3,7 @@ import {useState} from 'react'
 export default function App4() {
    const [num,setNum] = useState(0)
    const [result,setResult] = useState()
+   
 
 //    const f1 = () => {
 //     setResult(num*num)
@@ -19,7 +20,8 @@ export default function App4() {
       </p>
       <button onClick={()=>setResult(num*num)}>Submit</button>
       <hr></hr>
-     {result}
+     {/* {result} */}
+     {num}
     </div>
   );
 }
